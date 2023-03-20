@@ -6,6 +6,5 @@ target_include_directories(tester PUBLIC "${CMAKE_SOURCE_DIR}/Foundation/include
 
 target_link_libraries(tester PRIVATE Nutrition)
 
-add_test(NAME Nutrition.Commands.Eat COMMAND tester "eat")
-
+add_test(NAME Nutrition.Commands.Eat COMMAND tester eat)
 
