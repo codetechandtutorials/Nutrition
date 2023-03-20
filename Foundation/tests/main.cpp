@@ -1,7 +1,19 @@
 #include "Nutrition.h"
 #include <string>
+#include <iostream>
 
 int main(int argc, char** argv) {
+
+#ifdef _WIN32
+  std::cout << "running on windows\n";
+#elif __linux__
+  std::cout << "running on linux\n";
+#elif __APPLE__
+  std::cout << "running on macos\n";
+#else
+  std::cout << "not sure what os\n";
+#endif
+
   int return_value = -99;
   NutritionalValues test_values{};
 
